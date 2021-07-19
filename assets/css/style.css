@@ -46,15 +46,13 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #106eea;
-  height: 40px;
+  background: #545454;
+  padding: 10px 0;
   font-size: 14px;
-  transition: all 0.5s;
-  color: #fff;
 }
 
-#topbar.topbar-scrolled {
-  top: -40px;
+#topbar .contact-info {
+  color: #fff;
 }
 
 #topbar .contact-info a {
@@ -64,33 +62,42 @@ h6 {
 }
 
 #topbar .contact-info a:hover {
-  text-decoration: underline;
+  color: #e96b56;
 }
 
 #topbar .contact-info i {
-  padding-right: 4px;
-  margin-left: 15px;
+  color: #e96b56;
+  padding: 4px;
 }
 
-#topbar .contact-info i:first-child {
-  margin-left: 0;
+#topbar .contact-info .icofont-phone {
+  padding-left: 20px;
 }
 
 #topbar .social-links a {
-  color: rgba(255, 255, 255, 0.6);
-  padding-left: 15px;
+  color: #fff;
+  padding: 4px 0 4px 16px;
   display: inline-block;
   line-height: 1px;
   transition: 0.3s;
 }
 
 #topbar .social-links a:hover {
-  color: #fff;
+  color: #e96b56;
+}
+
+#topbar .social-links a:first-child {
+  border-left: 0;
 }
 
 
+/*--------------------------------------------------------------
+# header
+--------------------------------------------------------------*/
+
+
 #header {
-  margin-top: 40px;
+ 
   z-index: 997;
   transition: all 0.5s;
   padding: 15px 0;
@@ -133,7 +140,7 @@ h6 {
   #header .logo h1 {
     font-size: 28px;
   }
-}
+} 
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -670,6 +677,8 @@ h6 {
   content: " ";
   display: block;
   position: absolute;
+  border-radius:5px;
+  box-shadow:2px 2px 20px black;
   top: 0;
   right: 0;
   bottom: 0;
@@ -681,13 +690,12 @@ h6 {
   background: -webkit-linear-gradient(to right, #29323c, #485563);
  
   background: linear-gradient(to right, #29323c, #485563); */
-  background: #0575E6;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #021B79, #0575E6);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background: #1488CC;
+/* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
+/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2B32B2, #1488CC);
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   z-index: -1;
   transition: transform .5s ease;
@@ -708,24 +716,23 @@ h6 {
   content: " ";
   display: block;
   position: absolute;
+   border-radius:5px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   inset: 0 0 0 0;
+  box-shadow:2px 2px 20px black;
   /* background: hsl(200 100% 80%); */
   /* background: #485563;
   background: -webkit-linear-gradient(to right, #29323c, #485563);
   background: linear-gradient(to right, #29323c, #485563); */
-background: #0052D4;
+background: #1488CC;
 /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #6FB1FC, #4364F7, #0052D4);
+background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
 /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #6FB1FC, #4364F7, #0052D4);
+background: linear-gradient(to left, #2B32B2, #1488CC);
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
 
 
   z-index: -1;
@@ -1065,7 +1072,7 @@ section {
   justify-content: space-between;
   /* padding: 10px 0 10px 30px; */
   /* padding: 10px 30 10px 30px; */
-  font-family: "Nunito", sans-serif;
+  /* font-family: "Nunito", sans-serif; */
   font-size: 16px;
   font-weight: 700;
   color: #013289;
@@ -1081,24 +1088,15 @@ section {
 }
 
 .navbar a:hover,
-.navbar .active,
+.navbar,
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #4154f1;
+  /* font-family: "Nunito",sans-serif; */
 }
 
-.navbar .getstarted {
-  background: #4154f1;
-  padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 4px;
-  color: #fff;
-}
 
-.navbar .getstarted:hover {
-  color: #fff;
-  background: #5969f3;
-}
+
 
 .navbar .dropdown ul {
   display: block;
@@ -1631,7 +1629,7 @@ section {
 }
 
 .breadcrumbs {
-  margin-top: 73px;
+  
   text-align: center;
   /* background: #5f72cf; */
   padding: 30px 0;
@@ -2304,6 +2302,19 @@ section {
   color: rgba(1, 41, 112, 0.5);
   line-height: 0;
   margin-right: 10px;
+  transition: 0.3s;
+
+  font-size: 18px;
+  display: inline-block;
+  background: #106eea;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
   transition: 0.3s;
 }
 
