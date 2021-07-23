@@ -48,7 +48,116 @@
 
 </head>
 <style>
+  p.one {
+    border: solid 2px white;
+    padding: 5px;
+    width: 90px;
+    border-radius: 5px;
+    /* 5px top and bottom, 20px on the sides */
+  }
 
+  .one:hover>b {
+    color: black !important;
+    animation: ease-in-out;
+    animation-delay: 1s;
+    transition: 0.25s;
+  }
+
+  /* modal css */
+
+  .modal {
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  .modal .logo a img {
+    width: 30px;
+  }
+
+  .modal .modal-content {
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;
+  }
+
+  .modal .modal-content .modal-body {
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: #efefef;
+    padding-left: 0px;
+    padding-right: 0px;
+    -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
+  }
+
+  .modal .modal-content .modal-body h2 {
+    font-size: 18px;
+  }
+
+  .modal .modal-content .modal-body p {
+    color: #777;
+    font-size: 14px;
+  }
+
+  .modal .modal-content .modal-body h3 {
+    color: #000;
+    font-size: 22px;
+  }
+
+  .modal .modal-content .modal-body .close-btn {
+    color: #000;
+  }
+
+  .modal .modal-content .modal-body .promo-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  .modal .cancel {
+    color: gray;
+    font-size: 14px;
+  }
+
+  .close {
+    border: none;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .close:hover {
+    transform: rotate(30deg);
+    color: blue;
+    /* font-size: 3px; */
+    transition: 0.12s;
+  }
+
+  .space {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 70%;
+    position: relative;
+    height: 0;
+  }
+
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 </style>
 <!-- <script>
   var myCarousel = document.getElementById('myCarousel')
@@ -58,55 +167,125 @@
     alert("move");
   })
 </script> -->
+<script>
+  // show modal
+  $(window).on('load', function () {
+    // $('#exampleModalCenter').modal('toggle');
+    setTimeout(function () {
+      $('#exampleModalCenter').modal('show');
+    }, 2000);
+  });
+
+  $(document).ready(function () {
+    // alert("close");
+    $("#close").click(function () {
+      $('#exampleModalCenter').modal('hide');
+    });
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 
 <body>
-
   <!-- ======= modal ======= -->
+  <!-- Button to Open the Modal -->
+  <!-- The Modal -->
+  <!-- Button trigger modal -->
 
 
-  <!-- ======= end modal ======= -->
- <!-- ======= Top Bar ======= -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content rounded-0">
 
-  <!-- ======= Top Bar ======= -->
+        <div class="modal-body py-0">
+          <div class="d-flex main-content">
+            <div class="container">
+              <div class="row">
 
-  <!-- <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
-       <div class="container d-flex">
-         <div class="contact-info mr-auto">
-           <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-           <i class="icofont-phone"></i> +1 5589 55488 55
-         </div>
-         <div class="social-links">
-           <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-           <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-           <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-           <a href="#" class="skype"><i class="icofont-skype"></i></a>
-           <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-         </div>
-       </div>
-     </div> -->
-<!-- ======= Top Bar ======= -->
-<!-- <section id="topbar" class="d-none d-lg-block">
-  <div class="container d-flex">
-    <div class="contact-info mr-auto">
-      <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
-      <i class="icofont-phone"></i> +1 5589 55488 55
-    </div>
-    <div class="social-links">
-      <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-      <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-      <a href="#" class="skype"><i class="icofont-skype"></i></a>
-      <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+                <div class="bg-image promo-img col-sm-8 mr-3" style="background-image: url('assets/img/why-us.jpg');">
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="content-text  p-4">
+
+                    <div style="margin: left 300px;">
+                      <button type="button" id="close" class="close float-end" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div>
+                      <h3>Registration form</h3>
+                      <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
+                        blue.</p>
+                    </div>
+
+                    <form action="#">
+                      <div class="form-group space">
+                        <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <input type="text" class="form-control" id="fname" placeholder="Full Name">
+                      </div>
+
+                      <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
+                        <label for="name">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                      </div>
+
+                      <div class="form-group space">
+                        <label for="number">Phone number</label> <i class="fas fa-blender-phone    "></i>
+                        <input type="number" class="form-control" id="email" placeholder="Phon number">
+                      </div>
+                      <div class="form-group space">
+                        <label for="message">Message</label>
+                        <textarea name="" id="" class="form-control" placeholder="Message"
+                          aria-describedby="helpId"></textarea>
+
+                      </div>
+                      <div class="form-group space">
+                        <input type="submit" value="Sign up" class="btn btn-primary btn-block" id="close">
+                      </div>
+                      <div class="form-group space">
+                        <p class="custom-note"><small>By signing up you will agree to our <a href="#">Privacy
+                              Policy</a></small></p>
+                      </div>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section> -->
+  <!-- ======= end modal ======= -->
+  <!-- ======= Top Bar ======= -->
+
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+      </div>
+      <div class="top-bar-social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span>StockmarketSchool</span>
+        <span>SMS</span>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -115,14 +294,16 @@
           <div></div>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
 
-          <li class="dropdown nav-link scrollto"><a href="#Course" disabled tabindex="-1">Courses <i  class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Courses <i
+                class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="courses/course1.html">Technical Analysis Course</a></li>
               <li><a href="courses/course2.html">Advanced Options Trading</a></li>
 
-            </ul> </li>
+            </ul>
+          </li>
 
-            <!-- <ul>
+          <!-- <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>courses</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -298,14 +479,13 @@
       </div>
     </section> -->
     <!-- End Featured Services Section -->
-    <section id="team" class="team section-bg ">
+    <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
-
 
         <div class="row">
 
-          <div class="col-lg-6 ">
-            <div class="member c1 d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-6 col-sm-6 ">
+            <div class="member  c1 d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
               <div class="pic"><img src="assets/img/team/course-1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Technical Analysis Course</h4>
@@ -316,7 +496,7 @@
                 <div style="margin-top: 10px;">
                   <a href="courses/course1.html">
                     <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                    <p><b>Learn More</b></p>
+                    <p class="one"><b>Learn More</b></p>
                   </a>
                 </div>
 
@@ -325,8 +505,8 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="member c2  d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-6 col-sm-6">
+            <div class="member  c2  d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
               <div class="pic"><img src="assets/img/team/course-2.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Advanced Options Trading</h4>
@@ -337,7 +517,8 @@
                   consistent income.</p>
                 <div style="margin-top: 10px;">
                   <a href="courses/course2.html">
-                    <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button>
+                    <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                    <p class="one"><b>Learn More</b></p>
                   </a>
                 </div>
               </div>
@@ -568,21 +749,22 @@
       <div class="container">
 
         <div class="row ">
-          <div class="col-lg-6 video-box">
+          <div class="col-lg-6 col-sm-3 video-box">
             <!-- <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
               data-autoplay="true"></a> -->
+            <div class="video-responsive"><iframe style="padding:10px;padding-top: 15px;" width="600" height="450"
+                src="https://www.youtube.com/embed/OJ_1BZ7ZrbA?autoplay=1" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  "
+    
+                allowfullscreen >
+              </iframe></div>
 
-            <iframe style="padding:10px;padding-top: 15px;" width="630" height="450"
-              src="https://www.youtube.com/embed/OJ_1BZ7ZrbA" title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
           </div>
 
 
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <div class="col-lg-6 col-sm-3 d-flex flex-column justify-content-center p-5">
             <div class="title">
               <h3>Learn More About Strock Market</h3>
             </div>
@@ -658,14 +840,14 @@
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
               <img src="assets/img/logo.png" alt="">
-              <span>Stockmarketschool</span>
+              <span>Stockschool</span>
             </a>
             <p>Learn how to make money in stock market.</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
+              <a href="#" class="twitter footer-social-link"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook footer-social-link"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram footer-social-link"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin footer-social-link"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -685,7 +867,7 @@
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="courses/course1.html">Technical Analysis Course</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="courses/course2.html">Advanced Options Trading</a></li>
-              
+
             </ul>
           </div>
 
@@ -707,7 +889,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Stockmarketschool</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Stockschool</span></strong>. All Rights Reserved
       </div>
 
     </div>
@@ -728,6 +910,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <!-- <link rel="stylesheet" href="css/style.css "> -->
+  <script>
+
+  </script>
 
 </body>
 

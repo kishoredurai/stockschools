@@ -294,18 +294,35 @@
 
 
 
+  // Toggle .header-scrolled class to #header when page is scrolled
+  $(window).scroll(function () {
+    console.log($(this).scrollTop());
+    if ($(this).scrollTop() > 100) {
+      console.log($(this).scrollTop());
+      $('#header').addClass('header-scrolled');
+      $('#topbar').addClass('topbar-scrolled');
+    } else {
+      $('#header').removeClass('header-scrolled');
+      $('#topbar').removeClass('topbar-scrolled');
+    }
+  });
 
+  if ($(window).scrollTop() > 100) {
+    $('#header').addClass('header-scrolled');
+    $('#topbar').addClass('topbar-scrolled');
+  }
   // Preloader
 
   $(window).on('load', function () {
 
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function () {
-
         $(this).remove();
+       
       });
     }
   });
-
-
+  $(document).ready(function () {
+    
+  });
 })();
