@@ -66,6 +66,19 @@
   }
 
   /* modal css */
+  .modal-form {
+    border-radius: 10px;
+  }
+
+  .modal-form:active {
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
+  }
+  .modal-form:focus {
+     box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
+     border-radius: 15px;
+  }
 
   .modal {
     border-radius: 7px;
@@ -123,6 +136,7 @@
   }
 
   .close {
+    background: white;
     border: none;
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -211,7 +225,7 @@
                 <div class="bg-image promo-img col-sm-8 mr-3" style="background-image: url('assets/img/why-us.jpg');">
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-sm-6" style="background-color: white;">
                   <div class="content-text  p-4">
 
                     <div style="margin: left 300px;">
@@ -219,39 +233,40 @@
                     </div>
 
                     <div>
-                      <h3>Registration form</h3>
-                      <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
-                        blue.</p>
+                      <h3>Enquiry Form</h3>
+                      <!-- <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
+                        blue.</p> -->
                     </div>
 
                     <form action="#">
                       <div class="form-group space">
                         <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <input type="text" class="form-control" id="fname" placeholder="Full Name">
+                        <input type="text" class="form-control modal-form" id="fname" placeholder="Full Name">
                       </div>
 
                       <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
                         <label for="name">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <input type="email" class="form-control modal-form" id="email" placeholder="Enter email">
                       </div>
 
                       <div class="form-group space">
                         <label for="number">Phone number</label> <i class="fas fa-blender-phone    "></i>
-                        <input type="number" class="form-control" id="email" placeholder="Phon number">
+                        <input type="number" class="form-control modal-form" id="email" placeholder="Phon number">
                       </div>
                       <div class="form-group space">
                         <label for="message">Message</label>
-                        <textarea name="" id="" class="form-control" placeholder="Message"
+                        <textarea name="" id="" class="form-control modal-form" placeholder="Message"
                           aria-describedby="helpId"></textarea>
 
                       </div>
                       <div class="form-group space">
-                        <input type="submit" value="Sign up" class="btn btn-primary btn-block" id="close">
+                        <input type="submit" value="Sign up" class="btn btn-primary btn-block" 
+                        style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
                       </div>
-                      <div class="form-group space">
+                      <!-- <div class="form-group space">
                         <p class="custom-note"><small>By signing up you will agree to our <a href="#">Privacy
                               Policy</a></small></p>
-                      </div>
+                      </div> -->
 
                     </form>
                   </div>
@@ -420,8 +435,7 @@
           <div class="col-sm-6 col-lg-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
             <div class="card member c1 border-0 mb-3 ">
               <div class="row g-0">
-                <div
-                  class="col-md-4 col-lg-4 col-sm-6 ">
+                <div class="col-md-4 col-lg-4 col-sm-6 ">
                   <img src="assets/img/team/course-1.png" class="img-fluid rounded card-img-top" alt="...">
                 </div>
                 <div class="col-md-8 col-lg-8">
@@ -694,10 +708,13 @@
 
             <br><br>
             <div class="icon-box">
+
               <div class="icon"><i class="ri-line-chart-fill"></i></div>
+
               <h4 class="title"><a href="">Weekly Technical Analysis</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
                 occaecati cupiditate non provident</p>
+
             </div>
 
             <div class="icon-box">
@@ -735,21 +752,6 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <div class="footer-top">
       <div class="container">

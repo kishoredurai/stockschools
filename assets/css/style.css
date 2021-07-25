@@ -1,10 +1,3 @@
-/**
-* Template Name: FlexStart - v1.4.0
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -33,6 +26,18 @@ a:hover {
   color: grey;
 }
 
+/*------ scroll ----bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: linear-gradient(45deg, blue, skyblue);
+  box-shadow: inset 0 0 5px;
+}
+
+/* scroll bar end */
 h1,
 h2,
 h3,
@@ -537,10 +542,11 @@ h6 {
 
 .team .member {
   position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 2px 15px rgb(0 0 0 / 15%);
   padding: 10px;
   margin: 10px 10px 10px 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: #fff;
   transition: 0.3s;
 }
@@ -619,9 +625,7 @@ h6 {
   background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
 
   background: linear-gradient(to left, #2B32B2, #1488CC); */
-  background: #367ee8;
-
-
+  background: #106eea;
 
   z-index: -1;
   transition: transform .5s ease;
@@ -653,13 +657,13 @@ h6 {
   /* background: #485563;
   background: -webkit-linear-gradient(to right, #29323c, #485563);
   background: linear-gradient(to right, #29323c, #485563); */
-  background: #1488CC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #2B32B2, #1488CC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #1488CC;
 
+  background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
+
+  background: linear-gradient(to left, #2B32B2, #1488CC); */
+
+  background: #106eea;
 
   z-index: -1;
   transition: transform .5s ease;
@@ -1699,7 +1703,8 @@ section {
   width: 100%;
   background: #ffff;
   /* box-shadow: 0px 0px 10px #7d95da; */
-  box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+  /* box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%); */
+      box-shadow: 0px 2px 15px rgb(0 0 0 / 15%);
   border-radius: 10px;
 }
 
