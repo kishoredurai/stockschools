@@ -980,6 +980,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 #header {
+font-family: "Open Sans",sans-serif;
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -2210,6 +2211,7 @@ section {
   background: #f6f9ff;
   padding: 0 0 30px 0;
   font-size: 14px;
+ 
 }
 
 .footer .footer-newsletter {
