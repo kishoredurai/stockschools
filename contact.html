@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FlexStart-contact</title>
+  <title>contact</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -171,23 +171,23 @@
           </div>
 
           <div class="col-lg-6 ">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form name="submit-to-google-sheet" method="post" class="php-email-form" id="contactform">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name"  id="name" class="form-control" placeholder="Your Name" required>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control"  id="email" name="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -307,8 +307,24 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  
+  
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  
+      document.getElementById("contactform").reset();
 
+  })
+  
+  
+  </script>
 </body>
 
 </html>
