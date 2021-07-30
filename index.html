@@ -75,13 +75,14 @@
     outline: none;
     box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
   }
+
   .modal-form:focus {
-     box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-     border-radius: 5px;
+    box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
+    border-radius: 5px;
   }
 
   .modal {
-     font-family: "Nunito", sans-serif !important;
+    font-family: "Nunito", sans-serif !important;
     border-radius: 7px;
     overflow: hidden;
     background-color: transparent;
@@ -213,6 +214,8 @@
 
 
   <!-- Modal -->
+
+  <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -233,8 +236,8 @@
                       <button type="button" id="close" class="close float-end" data-dismiss="modal">&times;</button>
                     </div>
 
-                    <div>
-                      <h3 class="text-center" style="color: #0d6efd;font-size: 18px;font-weight: 600;">🎓️ Enquiry Form 💻️</h3>
+                    <div class="d-flex justify-content-center">
+                      <h3>Enquiry Form</h3>
                       <!-- <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
                         blue.</p> -->
                     </div>
@@ -245,38 +248,26 @@
                             <div class="form-group space">
                               <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
                               <input type="text" class="form-control modal-form" id="name" name="name" placeholder="Full Name" required>
-
                             </div>
                          </div>
                             <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
                               <label for="name">Email Address</label>
-
                               <input type="email" class="form-control modal-form" name="email" id="email" placeholder="Enter email" required>
-
                             </div>
-      
-                         
-                         
-                       
-                      
-
-                    
                       <div class="form-group space">
                         <label for="numbers">Phone number</label> <i class="fas fa-blender-phone    "></i>
+                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phone number">
 
-                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phon number">
                       </div>
                       <div class="form-group space">
                         <label for="message">Message</label>
                         <textarea name="message" id="message" class="form-control modal-form" placeholder="Message"
-
                           aria-describedby="helpId"></textarea>
 
                       </div>
                       <div class="form-group space">
-
-                        <input type="submit" class="btn btn-primary btn-block" 
-
+                        <input type="submit" class="btn submit btn-primary btn-block" 
+                        style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
                       </div>
                       <!-- <div class="form-group space">
                         <p class="custom-note"><small>By signing up you will agree to our <a href="#">Privacy
@@ -719,7 +710,8 @@
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
               data-autoplay="true"></a> -->
             <div class="video-responsive"><iframe style="padding:10px;padding-top: 15px;" width="600" height="450"
-                src="https://www.youtube.com/embed/OJ_1BZ7ZrbA?autoplay=1&mute=1" title="YouTube video player" frameborder="0"
+                src="https://www.youtube.com/embed/OJ_1BZ7ZrbA?autoplay=1&mute=1" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  "
                 allowfullscreen>
               </iframe></div>
@@ -869,24 +861,26 @@
   </script>
 
   <!-- modal submit sheet -->
-<script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyYThVc9rXyy-AQ6MDxGPsDKEyoV2aaGzGlQnztn0kyP_nV9puCVkxKo5zC9y3jVSYY/exec'
-const form = document.forms['submit-to-google-sheet']
+  <script>
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbyYThVc9rXyy-AQ6MDxGPsDKEyoV2aaGzGlQnztn0kyP_nV9puCVkxKo5zC9y3jVSYY/exec'
+    const form = document.forms['submit-to-google-sheet']
 
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  $('#exampleModalCenter').modal('hide');
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      $('#exampleModalCenter').modal('hide');
+      fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
 
-   
-
-})
 
 
-</script>
+    })
+  </script>
 
 
 
