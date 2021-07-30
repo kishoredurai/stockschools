@@ -67,17 +67,17 @@
 
   /* modal css */
   .modal-form {
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   .modal-form:active {
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
   }
   .modal-form:focus {
      box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-     border-radius: 10px;
+     border-radius: 5px;
   }
 
   .modal {
@@ -117,8 +117,9 @@
   }
 
   .modal .modal-content .modal-body h3 {
-    color: #000;
+    color:  #012970;
     font-size: 22px;
+    font-family:  "Nunito", sans-serif;
   }
 
   .modal .modal-content .modal-body .close-btn {
@@ -154,7 +155,34 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .submit{
+  
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    /* padding: 10px 32px 12px 32px; */
+    padding: 10px !important ;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 4px;
+    transition: 0.5s;
+    line-height: 1;
+    /* margin: 10px; */
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    text-transform: uppercase;
+    border: 3px solid #106eea;
+    background: #106eeaf3;
 
+  }
+  .submit:hover{
+    color: #106eea;
+    background: transparent;
+    border-color: #106eea;
+  }
   .bg-image {
     background-size: cover;
     background-position: center;
@@ -233,7 +261,7 @@
                       <button type="button" id="close" class="close float-end" data-dismiss="modal">&times;</button>
                     </div>
 
-                    <div>
+                    <div class="d-flex justify-content-center">
                       <h3>Enquiry Form</h3>
                       <!-- <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
                         blue.</p> -->
@@ -251,16 +279,9 @@
                               <label for="name">Email Address</label>
                               <input type="email" class="form-control modal-form" name="email" id="email" placeholder="Enter email" required>
                             </div>
-      
-                         
-                         
-                       
-                      
-
-                    
                       <div class="form-group space">
                         <label for="numbers">Phone number</label> <i class="fas fa-blender-phone    "></i>
-                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phon number">
+                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phone number">
 
                       </div>
                       <div class="form-group space">
@@ -270,7 +291,7 @@
 
                       </div>
                       <div class="form-group space">
-                        <input type="submit" class="btn btn-primary btn-block" 
+                        <input type="submit" class="btn submit btn-primary btn-block" 
                         style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
                       </div>
                       <!-- <div class="form-group space">
@@ -365,7 +386,7 @@
 
           <!-- Slide 1 -->
           <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-8.jpg);"> -->
-          <div class="carousel-item active" style="background: url('https://gfycat.com/ifr/ThickAdmirableHackee');background-repeat: no-repeat;background-size:
+          <div class="carousel-item active" style="background: url('assets/assets_carousel/img/carousel-gif.gif');background-repeat: no-repeat;background-size:
               cover;">
             <div class="carousel-container">
               <div class="carousel-content">
@@ -454,10 +475,12 @@
                     <p class="card-text">In this course, you will learn about stock market technical analysis from basic
                       to advanced
                       techniques.</p>
-                    <a href="courses/course2.html">
-                      <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                      <p class="one"><b>Learn More</b></p>
-                    </a>
+                      <div>
+                        <a href="courses/course2.html" style="width: 10px;">
+                          <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                          <p class="one"><b>Learn More</b></p>
+                        </a>
+                      </div>
                   </div>
                 </div>
               </div>
