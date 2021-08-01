@@ -289,12 +289,17 @@
                         <div class="form-group space ">
                           <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
                           <div class="d-flex flex-row justify-content-center">
-                            <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
+                            <!-- <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
                               placeholder="Mr">
                             <datalist id='listid'>
                               <option value='Mr'>
                               <option value='Mrs'>
-                            </datalist>
+                            </datalist> -->
+                            <select name="cars" class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  required >
+                              <!-- <option value="">Title</option> -->
+                              <option value="Mr">Mr</option>
+                              <option value="Mrs">Mrs</option>
+                            </select>
                             <input type="text" class="form-control modal-form" id="name" name="name"
                               placeholder="Full Name" required>
                           </div>
