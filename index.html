@@ -57,18 +57,20 @@
     border-radius: 5px;
     /* 5px top and bottom, 20px on the sides */
   }
- 
+
   .one:hover>b {
     color: black !important;
     animation: ease-in-out;
     animation-delay: 1s;
     transition: 0.25s;
   }
-  .course-learn-more{
+
+  .course-learn-more {
     display: block;
     width: 100px;
     text-align: center;
   }
+
   /* modal css */
   .modal-form {
     border-radius: 5px;
@@ -122,9 +124,9 @@
   }
 
   .modal .modal-content .modal-body h3 {
-    color:  #012970;
+    color: #012970;
     font-size: 22px;
-    font-family:  "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   .modal .modal-content .modal-body .close-btn {
@@ -160,15 +162,16 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .submit{
-  
+
+  .submit {
+
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
     /* padding: 10px 32px 12px 32px; */
-    padding: 10px !important ;
+    padding: 10px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
     border-radius: 4px;
@@ -183,11 +186,13 @@
     background: #106eeaf3;
 
   }
-  .submit:hover{
+
+  .submit:hover {
     color: #106eea;
     background: transparent;
     border-color: #106eea;
   }
+
   .bg-image {
     background-size: cover;
     background-position: center;
@@ -224,6 +229,10 @@
     setTimeout(function () {
       $('#exampleModalCenter').modal('show');
     }, 2000);
+    setInterval(function () {
+      console.log('Modal.show()');
+      $('#exampleModalCenter').modal('show');
+    }, 30000);
   });
 
   $(document).ready(function () {
@@ -269,42 +278,54 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                      <h3>🎓️ Enquiry Form 💻️</h3>
+                      <h3>🎓️ Enquiry Now 💻️</h3>
                       <!-- <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
                         blue.</p> -->
                     </div>
 
 
                     <form name="submit-to-google-sheet" method="post">
-                        <div class=".form-row">
-                            <div class="form-group space">
-                              <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
-                              <input type="text" class="form-control modal-form" id="name" name="name" placeholder="Full Name" required>
-                            </div>
-                         </div>
-                            <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
-                              <label for="name">Email Address</label>
-                              <input type="email" class="form-control modal-form" name="email" id="email" placeholder="Enter email" required>
-                            </div>
+                      <div class=".form-row">
+                        <div class="form-group space ">
+                          <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
+                          <div class="d-flex flex-row justify-content-center">
+                            <input class="form-control modal-form" style="width: 70px;" type='text' list='listid'
+                              placeholder="Mr">
+                            <datalist id='title'>
+                              <option value='Mr'>
+                              <option value='Mrs'>
+                            </datalist>
+                            <input type="text" class="form-control modal-form" id="name" name="name"
+                              placeholder="Full Name" required>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
+                        <label for="name">Email Address</label>
+                        <input type="email" class="form-control modal-form" name="email" id="email"
+                          placeholder="Enter email" required>
+                      </div>
                       <div class="form-group space">
                         <label for="numbers">Phone number</label> <i class="fas fa-blender-phone    "></i>
-                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phone number">
+                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber"
+                          placeholder="Phone number">
 
                       </div>
                       <div class="form-group space">
                         <label for="message">Message</label>
                         <textarea name="message" id="message" class="form-control modal-form" placeholder="Message"
                           aria-describedby="helpId"></textarea>
+                      </div>
+                      <div class="form-group  d-flex flex-row justify-content-center">
+                        <p class="custom-note"><small>By clicking submit I agree to our all the <a href="#">Terms and
+                              conditions</a></small></p>
+                      </div>
+                      <div class="form-group d-flex flex-row justify-content-center">
+                        <input type="submit" class="btn submit btn-primary btn-block"
+                          style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
+                      </div>
 
-                      </div>
-                      <div class="form-group space">
-                        <input type="submit" class="btn submit btn-primary btn-block" 
-                        style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
-                      </div>
-                      <!-- <div class="form-group space">
-                        <p class="custom-note"><small>By signing up you will agree to our <a href="#">Privacy
-                              Policy</a></small></p>
-                      </div> -->
 
                     </form>
                   </div>
@@ -424,7 +445,8 @@
 
           <!-- Slide 3 -->
           <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-3.jpg);"> -->
-          <div class="carousel-item" style="background: url(assets/assets_carousel/img/RAINING_COINS_400.gif); background-repeat: no-repeat;  background-size: cover;">
+          <div class="carousel-item"
+            style="background: url(assets/assets_carousel/img/RAINING_COINS_400.gif); background-repeat: no-repeat;  background-size: cover;">
             <!-- <div class="carousel-background"><img src="assets_carousel/img/slide/slide-3.jpg" alt=""> -->
             <!-- <div class="carousel-background" style="background-image: linear-gradient(toright, white, white);"></div> -->
             <div class="carousel-container">
@@ -483,12 +505,12 @@
                     <p class="card-text">In this course, you will learn about stock market technical analysis from basic
                       to advanced
                       techniques.</p>
-                      <div class="course-learn-more">
-                        <a href="courses/course2.html">
-                          <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                          <p class="one" ><b>Learn More</b></p>
-                        </a>
-                      </div>
+                    <div class="course-learn-more">
+                      <a href="courses/course2.html">
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                        <p class="one"><b>Learn More</b></p>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -508,13 +530,13 @@
                     <p class="card-text">In this course, you will learn about options in-depth including Greeks and
                       making
                       consistent income.</p>
-                      <div class="course-learn-more">
-                        <a href="courses/course2.html">
-                          <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                          <p class="one"><b>Learn More</b></p>
-                        </a>
-                      </div>
-                  
+                    <div class="course-learn-more">
+                      <a href="courses/course2.html">
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                        <p class="one"><b>Learn More</b></p>
+                      </a>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -627,9 +649,9 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                
-                    <h3>Training</h3>
-               
+
+                  <h3>Training</h3>
+
                   <!-- <div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisic</p>
                   </div> -->
@@ -647,9 +669,9 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                
-                    <h3> Momentum Pick</h3>
-                
+
+                  <h3> Momentum Pick</h3>
+
                 </div>
               </div>
 
@@ -908,9 +930,9 @@
       e.preventDefault();
       $('#exampleModalCenter').modal('hide');
       fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
+        method: 'POST',
+        body: new FormData(form)
+      })
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
 
