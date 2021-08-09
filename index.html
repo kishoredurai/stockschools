@@ -6,13 +6,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>StockMarketSchool</title>
+  <title>Stock Market School-Home</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+  <link href="favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,6 +64,12 @@
     animation: ease-in-out;
     animation-delay: 1s;
     transition: 0.25s;
+  }
+
+  .course-learn-more {
+    display: block;
+    width: 100px;
+    text-align: center;
   }
 
   /* modal css */
@@ -118,8 +125,9 @@
   }
 
   .modal .modal-content .modal-body h3 {
-    color: #000;
+    color: #012970;
     font-size: 22px;
+    font-family: "Nunito", sans-serif;
   }
 
   .modal .modal-content .modal-body .close-btn {
@@ -154,6 +162,36 @@
   .space {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .submit {
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    /* padding: 10px 32px 12px 32px; */
+    padding: 10px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 4px;
+    transition: 0.5s;
+    line-height: 1;
+    /* margin: 10px; */
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    text-transform: uppercase;
+    border: 3px solid #106eea;
+    background: #106eeaf3;
+
+  }
+
+  .submit:hover {
+    color: #106eea;
+    background: transparent;
+    border-color: #106eea;
   }
 
   .bg-image {
@@ -192,6 +230,10 @@
     setTimeout(function () {
       $('#exampleModalCenter').modal('show');
     }, 2000);
+    setInterval(function () {
+      console.log('Modal.show()');
+      $('#exampleModalCenter').modal('show');
+    }, 30000);
   });
 
   $(document).ready(function () {
@@ -226,7 +268,7 @@
             <div class="container">
               <div class="row">
 
-                <div class="bg-image promo-img col-sm-8 mr-3" style="background-image: url('assets/img/why-us.jpg');">
+                <div class="bg-image promo-img col-sm-8 mr-3" style="background-image: url('assets/logo.jpeg');">
                 </div>
 
                 <div class="col-sm-6" style="background-color: white;">
@@ -237,42 +279,62 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                      <h3>🎓️ Enquiry Form 💻️</h3>
+                      <h3>🎓️ Enquire Now 💻️</h3>
                       <!-- <p>All their equipment and instruments are alive. The sky was cloudless and of a deep dark
                         blue.</p> -->
                     </div>
 
 
                     <form name="submit-to-google-sheet" method="post">
-                        <div class=".form-row">
-                            <div class="form-group space">
-                              <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
-                              <input type="text" class="form-control modal-form" id="name" name="name" placeholder="Full Name" required>
-                            </div>
-                         </div>
-                            <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
-                              <label for="name">Email Address</label>
-                              <input type="email" class="form-control modal-form" name="email" id="email" placeholder="Enter email" required>
-                            </div>
+                      <div class=".form-row">
+                        <div class="form-group space ">
+                          <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
+                          <div class="d-flex flex-row justify-content-center">
+                            <!-- <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
+                              placeholder="Mr">
+                            <datalist id='listid'>
+                              <option value='Mr'>
+                              <option value='Mrs'>
+                            </datalist> -->
+                            <select name="cars" class="form-control modal-form" style="width: 70px; margin-right: 2px;"
+                              id="title" required>
+                              <!-- <option value="">Title</option> -->
+                              <option value="Mr">Mr</option>
+                              <option value="Mrs">Mrs</option>
+                              <option value="Ms">Ms</option>
+                              <option value="Miss">Miss</option>
+                              <option value="Dr">Dr</option>
+                            </select>
+                            <input type="text" class="form-control modal-form" id="name" name="name"
+                              placeholder="Full Name" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
+                        <label for="name">Email Address</label>
+                        <input type="email" class="form-control modal-form" name="email" id="email"
+                          placeholder="Enter email" required>
+                      </div>
                       <div class="form-group space">
                         <label for="numbers">Phone number</label> <i class="fas fa-blender-phone    "></i>
-                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber" placeholder="Phone number">
+                        <input type="number" class="form-control modal-form" id="phonenumber" name="phonenumber"
+                          placeholder="Phone number">
 
                       </div>
                       <div class="form-group space">
                         <label for="message">Message</label>
                         <textarea name="message" id="message" class="form-control modal-form" placeholder="Message"
                           aria-describedby="helpId"></textarea>
+                      </div>
+                      <div class="form-group  d-flex flex-row justify-content-center">
+                        <p class="custom-note"><small>By clicking submit I agree to our all the <a href="#">Terms and
+                              conditions</a></small></p>
+                      </div>
+                      <div class="form-group d-flex flex-row justify-content-center">
+                        <input type="submit" class="btn submit btn-primary btn-block"
+                          style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
+                      </div>
 
-                      </div>
-                      <div class="form-group space">
-                        <input type="submit" class="btn submit btn-primary btn-block" 
-                        style="padding: 5px; padding-left: 20px; padding-right: 20px;" id="close">
-                      </div>
-                      <!-- <div class="form-group space">
-                        <p class="custom-note"><small>By signing up you will agree to our <a href="#">Privacy
-                              Policy</a></small></p>
-                      </div> -->
 
                     </form>
                   </div>
@@ -304,10 +366,12 @@
   </div>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl d-flex align-items-end justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/log wit txt 3.png" alt="">
+        <img class="img-fluid" src="nav_logo_tx1.png" alt="">
+
+        <!-- <span>Stock Market School</span> -->
       </a>
 
       <nav id="navbar" class="navbar">
@@ -315,7 +379,7 @@
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <div></div>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
-
+          <li><a class="nav-link scrollto" href="live-webinar.html">Live Webinar</a></li>
           <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Courses <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
@@ -360,12 +424,12 @@
 
           <!-- Slide 1 -->
           <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-8.jpg);"> -->
-          <div class="carousel-item active" style="background: url('https://gfycat.com/ifr/ThickAdmirableHackee');background-repeat: no-repeat;background-size:
+          <div class="carousel-item active" style="background: url('assets/assets_carousel/img/carousel-gif.gif');background-repeat: no-repeat;background-size:
               cover;">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Learn how to make money in stock market</h2>
-                <p class="animate__animated animate__fadeInUp">Want to become independent successful trader</p>
+                <p class="animate__animated animate__fadeInUp"></p>
                 <div>
                   <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
                 </div>
@@ -375,12 +439,13 @@
 
           <!-- Slide 2 -->
           <!-- <div class="carousel-item active" style="background: url(assets_carousel/img/slide/slide-4.jpg);"> -->
-          <div class="carousel-item " style="background: url(assets/assets_carousel/img/giphy.webp); background-repeat: no-repeat;background-size:
+          <div class="carousel-item " style="background: url(https://media-exp1.licdn.com/dms/image/C5612AQHALJwCfHE9jg/article-cover_image-shrink_720_1280/0/1606881453611?e=1633564800&v=beta&t=0Hth0nBASP5bid4g5luc_5STqwnyeUlldflHDWzlhRg); background-repeat: no-repeat;background-size:
               cover;">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Learn how to make money in stock market</h2>
-                <p class="animate__animated animate__fadeInUp">Want to become independent successful trader</p>
+                <h2 class="animate__animated animate__fadeInDown">We make you Independent Investor and Trader
+                </h2>
+                <p class="animate__animated animate__fadeInUp"></p>
                 <div>
                   <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
                     More</a>
@@ -391,13 +456,14 @@
 
           <!-- Slide 3 -->
           <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-3.jpg);"> -->
-          <div class="carousel-item" style="background: url(assets/assets_carousel/img/present.gif); ">
+          <div class="carousel-item"
+            style="background: url(https://instinctif.com/content/uploads/2021/02/shutterstock_1049641082.jpg); background-repeat: no-repeat;  background-size: cover;">
             <!-- <div class="carousel-background"><img src="assets_carousel/img/slide/slide-3.jpg" alt=""> -->
             <!-- <div class="carousel-background" style="background-image: linear-gradient(toright, white, white);"></div> -->
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Learn how to make money in stock market</h2>
-                <p class="animate__animated animate__fadeInUp">Want to become independent successful trader</p>
+                <h2 class="animate__animated animate__fadeInDown" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Want to become independent successful trader</h2>
+                <p class="animate__animated animate__fadeInUp"></p>
                 <div>
                   <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
                     More</a>
@@ -450,10 +516,12 @@
                     <p class="card-text">In this course, you will learn about stock market technical analysis from basic
                       to advanced
                       techniques.</p>
-                    <a href="courses/course2.html">
-                      <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                      <p class="one"><b>Learn More</b></p>
-                    </a>
+                    <div class="course-learn-more">
+                      <a href="courses/course2.html">
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                        <p class="one"><b>Learn More</b></p>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -473,10 +541,13 @@
                     <p class="card-text">In this course, you will learn about options in-depth including Greeks and
                       making
                       consistent income.</p>
-                    <a href="courses/course2.html">
-                      <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
-                      <p class="one"><b>Learn More</b></p>
-                    </a>
+                    <div class="course-learn-more">
+                      <a href="courses/course2.html">
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
+                        <p class="one"><b>Learn More</b></p>
+                      </a>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -535,7 +606,7 @@
               <i class="bi bi-briefcase" style="color: #15be56;"></i>
               <div>
                 <div class="d-flex flex-row">
-                  <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                  <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
                     class="purecounter"></span>
                   <span>+</span>
                 </div>
@@ -580,7 +651,7 @@
 
           <div class="col-lg-6">
             <!-- <img src="https://bcreactor.com/wp-content/uploads/2018/08/Trainng.png" class="img-fluid" alt=""> -->
-            <img src="assets/img/5127314.jpg" class="img-fluid" alt="" srcset="">
+            <img src="assets/services.jpg" class="img-fluid" alt="" srcset="">
           </div>
 
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
@@ -589,9 +660,9 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <div>
-                    <h3>Training</h3>
-                  </div>
+
+                  <h3>Training</h3>
+
                   <!-- <div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisic</p>
                   </div> -->
@@ -609,30 +680,37 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <a href="">
-                    <h3> Momentum Pick</h3>
-                  </a>
+
+                  <h3>Support</h3>
+
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Option Strategy</h3>
+                  <h3>Intraday strategies</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>SIP Stock Alert</h3>
+                  <h3>Short Term strategies</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Customized Package</h3>
+                  <h3>Right Stock Selection</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Investment Planning</h3>
                 </div>
               </div>
 
@@ -721,7 +799,7 @@
 
           <div class="col-lg-6 col-md-12 col-sm-3 d-flex flex-column justify-content-center p-5">
             <div class="title">
-              <h3>Learn More About Stock Market 💸️</h3>
+              <h3>Learn More About Stock Market School</h3>
             </div>
 
             <!-- <div class="icon-box">
@@ -735,18 +813,18 @@
 
               <div class="icon"><i class="ri-line-chart-fill"></i></div>
 
-              <h4 class="title"><a href="">Weekly Technical Analysis</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="">Daily Technical Analysis view</a></h4>
+              <p class="description">Learn how to analyze before the market opens what the factors can drive the market for the day. 
+                Which are the global markets to watch and how do the global markets impact the indian stock market?
+              </p>
 
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="ri-play-circle-line"></i></div>
-              <h4 class="title"><a href="">Beginners Educational Videos</video></a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium
-                voluptatum deleniti atque</p>
+              <h4 class="title"><a href="">Beginners educational videos</video></a></h4>
+              <p class="description">We at stock market school provide basics of stock market videos and books for the beginners who start learning with us.
+              </p>
             </div>
 
           </div>
@@ -782,8 +860,8 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/log wit txt 3.png" alt="">
-             
+              <img class="img-fluid" src="nav_logo_tx1.png" alt="">
+              <!-- <span>Stock Market School</span> -->
             </a>
             <p>Learn how to make money in stock market.</p>
             <div class="social-links mt-3">
@@ -855,9 +933,7 @@
   <script src="assets/js/main.js"></script>
   <!-- <script src="js/main.js"></script> -->
   <!-- <link rel="stylesheet" href="css/style.css "> -->
-  <script>
 
-  </script>
 
   <!-- modal submit sheet -->
   <script>
@@ -870,20 +946,29 @@
       e.preventDefault();
       $('#exampleModalCenter').modal('hide');
       fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
+        method: 'POST',
+        body: new FormData(form)
+      })
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
-
-
-
     })
   </script>
 
 
 
-
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/610668b7d6e7610a49adfe5f/1fc0gi49d';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 
 </html>
