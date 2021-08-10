@@ -84,7 +84,7 @@
         <ul>
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
-          <li><a class="nav-link scrollto" href="live-webinar.html">Live Webinar</a></li>
+          <li><a class="nav-link scrollto" href="live-webinar.html">Events</a></li>
           <li class="dropdown"><a class="nav-link scrollto" href="#Course" disabled tabindex="-1">Courses <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
@@ -94,7 +94,15 @@
             </ul>
           </li>
 
+          <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Open Trading Account <i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="https://zerodha.com/?c=FX9409&s=CONSOLE">Open an account with Zerodha </a></li>
+              <li><a href="https://www.5paisa.com/open-demat-account/?referralcode=57130872">Open an account with
+                  5paisa.com</a></li>
 
+            </ul>
+          </li>
           <!-- <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>courses</span> <i class="bi bi-chevron-right"></i></a>
@@ -180,11 +188,11 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name"  id="name" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control"  id="email" name="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="col-md-12">
@@ -192,7 +200,8 @@
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message"
+                    required></textarea>
 
                 </div>
 
@@ -292,6 +301,14 @@
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Stockschool</span></strong>. All Rights Reserved
+        <div>
+          <p>
+            <strong>Disclaimer:</strong>
+            Hexaurum is not a SEBI recognized investment advisory firm. We share our market analysis based on which
+            trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on their
+            portfolios.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -315,23 +332,23 @@
 
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
-  const form = document.forms['submit-to-google-sheet']
-  
-  
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+    const form = document.forms['submit-to-google-sheet']
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+
       document.getElementById("contactform").reset();
 
-  })
+    })
   </script>
 
-   <!--Start of Tawk.to Script-->
-   <script type="text/javascript">
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
       var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];

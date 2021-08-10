@@ -626,7 +626,7 @@ h6 {
   background: -webkit-linear-gradient(to left, #2B32B2, #1488CC);
 
   background: linear-gradient(to left, #2B32B2, #1488CC); */
- background: #106eea;
+  background: #106eea;
 
   z-index: -1;
   transition: transform .5s ease;
@@ -974,11 +974,13 @@ section {
 #topbar .top-bar-social-links a:hover {
   color: #fff;
 }
+
 @media (max-width: 1500px) {
   .top-bar-social-links {
     margin-left: auto;
   }
 }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -1378,6 +1380,7 @@ section {
     width: 100%;
   }
 }
+
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
@@ -1449,6 +1452,7 @@ section {
 .events .card:hover .card-body .card-title a {
   color: #106eea;
 }
+
 /*--------------------------------------------------------------
 # Index Page
 --------------------------------------------------------------*/
@@ -1807,12 +1811,15 @@ section {
   color: #0b198f;
   transition: all 0.3s ease-in-out;
 }
-.counts .count-box:hover span{
+
+.counts .count-box:hover span {
   color: #fff;
 }
-.counts .count-box:hover> .bi{
+
+.counts .count-box:hover>.bi {
   color: #fff !important;
 }
+
 .counts .count-box p {
   padding: 0;
   margin: 0;
@@ -1849,11 +1856,13 @@ section {
   border-radius: 5px;
   /* transition-delay: 0.12s; */
   /* color: white; */
-  background-color:#106eea;
+  background-color: #106eea;
 }
-.features .feature-box:hover> h3{
+
+.features .feature-box:hover>h3 {
   color: white;
 }
+
 .features .feature-box h3 {
   font-size: 18px;
   color: #012970;
@@ -1972,7 +1981,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .service-box {
+/* .services .service-box {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   height: 100%;
   padding: 60px 30px;
@@ -2122,6 +2131,69 @@ section {
 
 .services .service-box:hover .icon {
   background: #fff;
+} */
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 60px 30px;
+  transition: all ease-in-out 0.3s;
+  background: #fefefe;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
+  border-radius: 18px;
+  border-bottom: 5px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 20px rgb(0 0 0 / 10%);
+}
+
+.services .icon-box .icon {
+  width: 64px;
+  height: 64px;
+  background: #106eea;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+
+.services .icon-box .icon i {
+  font-size: 28px;
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.services .icon-box h4 a {
+  color: #282828;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.services .icon-box:hover {
+  transform: translateY(-10px);
+  border-color: #106eea;
+}
+
+.services .icon-box:hover h4 a {
+  color: #106eea;
 }
 
 /*--------------------------------------------------------------
@@ -2149,12 +2221,15 @@ section {
 
 .contact .info-box:hover>h3 {
   font-weight: bold;
-  color: white;transition: 0.5s;
-}
-.contact .info-box:hover>i{
   color: white;
   transition: 0.5s;
 }
+
+.contact .info-box:hover>i {
+  color: white;
+  transition: 0.5s;
+}
+
 .contact .info-box i {
   font-size: 38px;
   line-height: 0;
