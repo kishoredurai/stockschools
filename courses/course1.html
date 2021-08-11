@@ -198,24 +198,53 @@
             <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for=""></label>
-                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                    placeholder="">
-                                <small id="helpId" class="form-text text-muted">Help text</small>
+                    <form name="submit-to-google-sheet" method="post" id = "courseform">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Full Name</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        aria-describedby="helpId" placeholder="Enter Your Name" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Mobile Number</label>
+                                    <input type="text" class="form-control" name="mobile" id="mobile"
+                                        aria-describedby="helpId" placeholder="Enter Mobile Number" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        aria-describedby="helpId" placeholder="Enter Your Email" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">City</label>
+                                    <input type="text" class="form-control" name="city" id="city"
+                                        aria-describedby="helpId" placeholder="Enter City">
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                                <button type="submit"  class="btn btn-primary">Register</button>
+                            </div>
+
                         </div>
-                        <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                            <button type="button" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -338,11 +367,11 @@
                                         </h5>
 
                                         <p>
-                                        <ul>
-                                            <li>Successful equity & future trader.</li>
-                                            <li>Intraday and short-term trader.</li>
-                                            <li>Support after the course: Lifetime free support.</li>
-                                        </ul>
+                                            <ul>
+                                                <li>Successful equity & future trader.</li>
+                                                <li>Intraday and short-term trader.</li>
+                                                <li>Support after the course: Lifetime free support.</li>
+                                            </ul>
                                         </p>
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -427,19 +456,24 @@
                     <div class="col-lg-3 col-6 footer-links">
                         <h4>Our Courses</h4>
                         <ul>
-                          <li><i class="bi bi-chevron-right"></i> <a href="../courses/course1.html">Technical Analysis Course</a></li>
-                          <li><i class="bi bi-chevron-right"></i> <a href="../courses/course2.html">Advanced Options Trading</a></li>
-            
+                            <li><i class="bi bi-chevron-right"></i> <a href="../courses/course1.html">Technical Analysis
+                                    Course</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../courses/course2.html">Advanced Options
+                                    Trading</a></li>
+
                         </ul>
                         <h4 class="mt-3">Trading Account</h4>
                         <ul>
-                          <li><i class="bi bi-chevron-right"></i> <a href="https://zerodha.com/?c=FX9409&s=CONSOLE">Open an
-                            account with Zerodha</a></li>
-                          <li><i class="bi bi-chevron-right"></i> <a href="https://www.5paisa.com/open-demat-account/?referralcode=57130872">Open an account with
-                            5paisa</a></li>
-            
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="https://zerodha.com/?c=FX9409&s=CONSOLE">Open an
+                                    account with Zerodha</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a
+                                    href="https://www.5paisa.com/open-demat-account/?referralcode=57130872">Open an
+                                    account with
+                                    5paisa</a></li>
+
                         </ul>
-                      </div>
+                    </div>
 
                     <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact Us</h4>
@@ -498,14 +532,37 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+
+    <!-- google sheet -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyFZA9ZmH_gS7lkICCN5VVaHh299HG1oEedgxSIVvGULfBe0gwuMrkwbw1Cg5RQz97s2A/exec'
+        const form = document.forms['submit-to-google-sheet']
+    
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          $('#exampleModal').modal('hide');
+
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    
+          document.getElementById("courseform").reset();
+    
+        })
+      </script>
+
     <!-- Template Main JS File -->
 
     <script src="../assets/js/main.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
         (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
             s1.src = 'https://embed.tawk.to/610668b7d6e7610a49adfe5f/1fc0gi49d';
             s1.charset = 'UTF-8';
