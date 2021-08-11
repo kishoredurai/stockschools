@@ -86,7 +86,7 @@
 
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Open Trading
+                    <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Trading
                             Account <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a style="padding-right: 40px;" href="https://zerodha.com/?c=FX9409&s=CONSOLE"><img
@@ -172,19 +172,42 @@
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Available Seats</h5>
-                            <p>30</p>
+                            <p>100</p>
                         </div>
 
                         <div class="course-info d-flex justify-content-end align-items-end">
                             <!-- <h5>Schedule</h5> -->
                             <!-- <p>5.00 pm - 7.00 pm</p> -->
                             <button type="button" class="btn btn-outline-primary"
-                                style="padding: 2px; padding-left: 5px;padding-right: 5px;">Book seats</button>
+                                style="padding: 2px; padding-left: 5px;padding-right: 5px;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Book seats</button>
                         </div>
-
                     </div>
                 </div>
+            </div>
 
+            <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                    placeholder="">
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section><!-- End Cource Details Section -->
 
@@ -417,13 +440,12 @@
                 &copy; Copyright <strong><span>Stockschool</span></strong>. All Rights Reserved
                 <div>
                     <p>
-                        <strong>Disclaimer:</strong>
-                        Stock Market School is not a SEBI recognized investment advisory firm. We share our market
-                        analysis based
-                        on which
-                        trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on
-                        their
-                        portfolios.
+                        <small class="text-dark" ><strong>Disclaimer:</strong>
+                            Stock Market School is not a SEBI recognized investment advisory firm. We share our market analysis based
+                            on
+                            which
+                            trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on their
+                            portfolios.</small>
                     </p>
                 </div>
             </div>

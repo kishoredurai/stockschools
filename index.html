@@ -282,7 +282,8 @@
                   <div class="content-text  p-4">
 
                     <div style="margin: left 300px;">
-                      <button type="button" id="close" class="close float-end" data-dismiss="modal">&times;</button>
+                      <!-- <button type="button" id="close" class="close float-end"  data-dismiss="modal">&times;</button> -->
+                      <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -295,7 +296,7 @@
                     <form id="modal-form" name="submit-to-google-sheet" method="post">
                       <div class="form-row">
                         <div class="form-group input-field space ">
-                          <i class="fas fa-user"></i> <label for="fname">Full Name</label>
+                          <i class="fas fa-user text-primary"></i> <label for="fname">Full Name</label>
                           <div class="d-flex flex-row justify-content-center">
                             <!-- <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
                               placeholder="Mr">
@@ -318,18 +319,18 @@
                         </div>
                       </div>
                       <div class="form-group space">
-                        <i class="fas fa-envelope"></i> <label for="name">Email Address</label>
+                        <i class="fas fa-envelope text-primary"></i> <label for="name">Email Address</label>
                         <input type="email" class="form-control modal-form" name="email" id="email"
                           placeholder="Enter email" required>
                       </div>
                       <div class="form-group space">
-                        <i class="fas fa-mobile"></i> <label for="numbers">Phone number</label>
+                        <i class="fas fa-mobile text-primary"></i> <label for="numbers">Phone number</label>
                         <input type="tel" class="form-control modal-form" id="phonenumber" name="phonenumber"
                           placeholder="Enter phone number" aria-required="true" required>
 
                       </div>
                       <div class="form-group space">
-                        <i class="fas fa-comment-alt"></i> <label for="message">Message</label>
+                        <i class="fas fa-comment-alt text-primary"></i> <label for="message">Message</label>
                         <textarea name="message" id="message" class="form-control modal-form" placeholder="Message"
                           aria-describedby="helpId"></textarea>
                       </div>
@@ -408,7 +409,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Open Trading Account <i
+          <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Trading Account <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a style="padding-right: 40px;" href="https://zerodha.com/?c=FX9409&s=CONSOLE"><img
@@ -495,7 +496,6 @@
             </div>
           </div>
           <!-- slide 4 -->
-
 
         </div>
 
@@ -947,11 +947,13 @@
         &copy; Copyright <strong><span>Stockschool</span></strong>. All Rights Reserved
         <div>
           <p>
-            <strong>Disclaimer:</strong>
-            Stock Market School is not a SEBI recognized investment advisory firm. We share our market analysis based on
-            which
-            trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on their
-            portfolios.
+            <small class="text-dark" ><strong>Disclaimer:</strong>
+              Stock Market School is not a SEBI recognized investment advisory firm. We share our market analysis based
+              on
+              which
+              trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on their
+              portfolios.</small>
+
           </p>
         </div>
       </div>
