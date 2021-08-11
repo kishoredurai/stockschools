@@ -36,7 +36,9 @@
   <!-- <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet"> -->
-
+  <!-- <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"> -->
   <!-- carousel CSS Files -->
   <link href="assets/assets_carousel/vendor/icofont/icofont.min.css" rel="stylesheet">
 
@@ -283,7 +285,8 @@
 
                     <div style="margin: left 300px;">
                       <!-- <button type="button" id="close" class="close float-end"  data-dismiss="modal">&times;</button> -->
-                      <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button type="button" class="btn-close float-end" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -298,15 +301,9 @@
                         <div class="form-group input-field space ">
                           <i class="fas fa-user text-primary"></i> <label for="fname">Full Name</label>
                           <div class="d-flex flex-row justify-content-center">
-                            <!-- <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
-                              placeholder="Mr">
-                            <datalist id='listid'>
-                              <option value='Mr'>
-                              <option value='Mrs'>
-                            </datalist> -->
-                            <select name="cars" class="form-control modal-form" style="width: 70px; margin-right: 2px;"
+                            <select name="Title" class="form-control  form-select modal-form" style="width: 80px; margin-right: 2px;"
                               id="title" required>
-                              <!-- <option value="">Title</option> -->
+                              <option selected>Title</option>
                               <option value="Mr">Mr</option>
                               <option value="Mrs">Mrs</option>
                               <option value="Ms">Ms</option>
@@ -314,10 +311,11 @@
                               <option value="Dr">Dr</option>
                             </select>
                             <input type="text" class="form-control validate modal-form" id="name" name="name"
-                              placeholder="Full Name" required>
+                              placeholder="Full Name" required aria-describedby="title">
                           </div>
                         </div>
                       </div>
+                      
                       <div class="form-group space">
                         <i class="fas fa-envelope text-primary"></i> <label for="name">Email Address</label>
                         <input type="email" class="form-control modal-form" name="email" id="email"
@@ -742,7 +740,7 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Live Trading</h3>
+                  <h3>Live Market Trading</h3>
                 </div>
 
               </div>
@@ -947,7 +945,7 @@
         &copy; Copyright <strong><span>Stockschool</span></strong>. All Rights Reserved
         <div>
           <p>
-            <small class="text-dark" ><strong>Disclaimer:</strong>
+            <small class="text-dark"><strong>Disclaimer:</strong>
               Stock Market School is not a SEBI recognized investment advisory firm. We share our market analysis based
               on
               which
