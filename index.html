@@ -23,6 +23,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <!-- <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> -->
 
@@ -252,7 +253,6 @@
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
-
 <body>
   <!-- ======= modal ======= -->
   <!-- Button to Open the Modal -->
@@ -260,7 +260,6 @@
   <!-- Button trigger modal -->
 
 
-  <!-- Modal -->
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -273,7 +272,8 @@
             <div class="container">
               <div class="row">
 
-                <div class="bg-image promo-img col-sm-8 mr-3" style="background-image: url('assets/logo.jpeg');">
+                <div class="bg-image promo-img col-sm-8 mr-3"
+                  style="background-image: url('assets/img/logo/log png.png');">
                 </div>
 
                 <div class="col-sm-6" style="background-color: white;">
@@ -292,8 +292,8 @@
 
                     <form id="modal-form" name="submit-to-google-sheet" method="post">
                       <div class="form-row">
-                        <div class="form-group space ">
-                          <label for="fname">Full Name</label> <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <div class="form-group input-field space ">
+                          <i class="fas fa-user"></i> <label for="fname">Full Name</label>
                           <div class="d-flex flex-row justify-content-center">
                             <!-- <input class="form-control modal-form" style="width: 70px; margin-right: 2px;" id = "title"  type='text' list='listid'
                               placeholder="Mr">
@@ -310,24 +310,24 @@
                               <option value="Miss">Miss</option>
                               <option value="Dr">Dr</option>
                             </select>
-                            <input type="text" class="form-control modal-form" id="name" name="name"
+                            <input type="text" class="form-control validate modal-form" id="name" name="name"
                               placeholder="Full Name" required>
                           </div>
                         </div>
                       </div>
-                      <div class="form-group space"><i class="fas fa-mail-bulk    "></i>
-                        <label for="name">Email Address</label>
+                      <div class="form-group space">
+                        <i class="fas fa-envelope"></i> <label for="name">Email Address</label>
                         <input type="email" class="form-control modal-form" name="email" id="email"
                           placeholder="Enter email" required>
                       </div>
                       <div class="form-group space">
-                        <label for="numbers">Phone number</label> <i class="fas fa-blender-phone    "></i>
+                        <i class="fas fa-mobile"></i> <label for="numbers">Phone number</label>
                         <input type="tel" class="form-control modal-form" id="phonenumber" name="phonenumber"
-                          placeholder="Phone number" pattern="[0-9]{10}" required>
-
+                          placeholder="Enter phone number" aria-required="true"  required>
+                         
                       </div>
                       <div class="form-group space">
-                        <label for="message">Message</label>
+                        <i class="fas fa-comment-alt"></i> <label for="message">Message</label>
                         <textarea name="message" id="message" class="form-control modal-form" placeholder="Message"
                           aria-describedby="helpId"></textarea>
                       </div>
@@ -372,7 +372,7 @@
     <div class="container-fluid container-xl d-flex align-items-end justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img class="img-fluid" src="nav_logo_tx1.png" alt="">
+        <img class="img-fluid" src="assets/img/logo/nav_logo_tx1.png" alt="">
 
         <!-- <span>Stock Market School</span> -->
       </a>
@@ -409,9 +409,13 @@
           <li class="dropdown"><a class="nav-link scrollto" href="" disabled tabindex="-1">Open Trading Account <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="https://zerodha.com/?c=FX9409&s=CONSOLE">Open an account with Zerodha </a></li>
-              <li><a href="https://www.5paisa.com/open-demat-account/?referralcode=57130872">Open an account with
-                  5paisa.com</a></li>
+              <li><a href="https://zerodha.com/?c=FX9409&s=CONSOLE"><img src="assets/img/nav-icons/footer-zerodha.png"
+                    class="img-responsive img-thumbnail" style="height: 30px;width: 30px;" alt="" srcset=""> Open an
+                  account with Zerodha </a></li>
+              <li><a href="https://www.5paisa.com/open-demat-account/?referralcode=57130872"><img
+                    src="assets/img/nav-icons/footer-5paisa.png" class="img-responsive img-thumbnail"
+                    style="height: 30px;width: 30px;" alt="" srcset="">Open an account with
+                  5paisa</a></li>
 
             </ul>
           </li>
@@ -885,7 +889,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="nav_logo_tx1.png" alt="">
+              <img src="assets/img/logo/nav_logo_tx1.png" alt="">
               <!-- <span>Stockschool</span> -->
             </a>
             <p>Learn how to make money in stock market.</p>
@@ -939,7 +943,8 @@
         <div>
           <p>
             <strong>Disclaimer:</strong>
-            Hexaurum is not a SEBI recognized investment advisory firm. We share our market analysis based on which
+            Stock Market School is not a SEBI recognized investment advisory firm. We share our market analysis based on
+            which
             trades are posted. It is trader’s responsibility to maintain appropriate Risk Management on their
             portfolios.
           </p>
